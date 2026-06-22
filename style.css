@@ -356,6 +356,13 @@ footer a:hover { color: var(--charcoal); }
   border-bottom-color: var(--charcoal);
 }
 
+.portfolio-subnav a {
+  font-size: 0.85rem !important;
+  letter-spacing: 0.12em !important;
+  color: var(--charcoal) !important;
+  text-transform: lowercase;
+}
+
 .portfolio-section {
   padding: var(--spacing-l) 2.5rem;
 }
