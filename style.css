@@ -734,13 +734,13 @@ form .field { display: flex; flex-direction: column; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: calc(var(--spacing-xl) + 2rem) 2.5rem var(--spacing-xl);
-  gap: var(--spacing-m);
+  padding: calc(var(--spacing-xl) + 2rem) 2.5rem var(--spacing-l);
+  gap: var(--spacing-s);
 }
 
 .shop-img-wrap {
   width: 100%;
-  max-width: 600px;
+  max-width: 380px;
   aspect-ratio: 2/3;
   overflow: hidden;
 }
@@ -771,11 +771,12 @@ form .field { display: flex; flex-direction: column; }
 
 @media (max-width: 768px) {
   .shop-wrap {
-    padding: calc(80px + var(--spacing-m)) 1.5rem var(--spacing-l);
+    padding: calc(80px + var(--spacing-s)) 1.5rem var(--spacing-m);
+    gap: var(--spacing-xs);
   }
 
   .shop-img-wrap {
-    max-width: 100%;
+    max-width: 280px;
   }
 }
 
