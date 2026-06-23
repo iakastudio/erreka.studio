@@ -728,6 +728,58 @@ form .field { display: flex; flex-direction: column; }
 }
 
 /* =====================
+   SHOP PAGE
+   ===================== */
+.shop-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: calc(var(--spacing-xl) + 2rem) 2.5rem var(--spacing-xl);
+  gap: var(--spacing-m);
+}
+
+.shop-img-wrap {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 2/3;
+  overflow: hidden;
+}
+
+.shop-img-wrap img {
+  pointer-events: none;
+}
+
+.shop-tagline {
+  font-family: var(--ff-display);
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--charcoal);
+  text-align: center;
+  margin-top: var(--spacing-s);
+}
+
+.shop-body {
+  font-family: var(--ff-body);
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--stone);
+  text-align: center;
+  max-width: 420px;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .shop-wrap {
+    padding: calc(80px + var(--spacing-m)) 1.5rem var(--spacing-l);
+  }
+
+  .shop-img-wrap {
+    max-width: 100%;
+  }
+}
+
+/* =====================
    PAGE 404
    ===================== */
 .not-found {
