@@ -38,7 +38,16 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img { display: block; width: 100%; height: 100%; object-fit: cover; }
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
 a { color: inherit; text-decoration: none; }
 ul { list-style: none; }
 
@@ -131,6 +140,27 @@ nav::before {
   inset: 0;
 }
 
+/* Hero slideshow */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.88);
+}
+
+/* Fallback pour hero simple (pages autres) */
 .hero-img {
   width: 100%;
   height: 100%;
@@ -227,6 +257,7 @@ nav::before {
 .grid-item img {
   transition: transform 0.6s ease, filter 0.6s ease;
   filter: brightness(0.85);
+  pointer-events: none;
 }
 
 .grid-item:hover img {
@@ -321,6 +352,38 @@ footer a:hover { color: var(--charcoal); }
 /* =====================
    PORTFOLIO PAGE
    ===================== */
+.portfolio-subnav {
+  position: sticky;
+  top: 72px;
+  z-index: 999;
+  display: flex;
+  gap: 2rem;
+  padding: 1rem 2.5rem;
+  background: rgba(242,239,233,0.98);
+  border-bottom: 1px solid var(--fog);
+  flex-wrap: wrap;
+}
+
+.portfolio-subnav a {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+  color: var(--charcoal);
+  transition: color var(--transition);
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+}
+
+.portfolio-subnav a:hover,
+.portfolio-subnav a.active {
+  color: var(--charcoal);
+  border-bottom-color: var(--charcoal);
+}
+
+.portfolio-body {
+  padding-top: 120px;
+}
+
 .page-header {
   padding: calc(var(--spacing-xl) + 2rem) 2.5rem var(--spacing-m);
 }
@@ -356,13 +419,6 @@ footer a:hover { color: var(--charcoal); }
   border-bottom-color: var(--charcoal);
 }
 
-.portfolio-subnav a {
-  font-size: 0.85rem !important;
-  letter-spacing: 0.12em !important;
-  color: var(--charcoal) !important;
-  text-transform: lowercase;
-}
-
 .portfolio-section {
   padding: var(--spacing-l) 2.5rem;
 }
@@ -385,11 +441,14 @@ footer a:hover { color: var(--charcoal); }
   break-inside: avoid;
   margin-bottom: 3px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .masonry-item img {
   height: auto;
   transition: transform 0.5s ease;
+  pointer-events: none;
+  max-width: 1200px;
 }
 
 .masonry-item:hover img { transform: scale(1.02); }
@@ -494,6 +553,9 @@ form input:focus,
 form select:focus,
 form textarea:focus {
   border-bottom-color: var(--charcoal);
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 2px 0 0 var(--charcoal);
 }
 
 form textarea { resize: none; height: 100px; }
@@ -572,6 +634,7 @@ form .field { display: flex; flex-direction: column; }
 
 .tirage-card-img img {
   transition: transform 0.6s ease;
+  pointer-events: none;
 }
 
 .tirage-card:hover .tirage-card-img img {
@@ -613,6 +676,7 @@ form .field { display: flex; flex-direction: column; }
   width: auto;
   height: auto;
   object-fit: contain;
+  pointer-events: none;
 }
 
 .lightbox-close {
@@ -626,6 +690,39 @@ form .field { display: flex; flex-direction: column; }
   cursor: pointer;
   font-family: var(--ff-body);
   letter-spacing: 0.1em;
+}
+
+/* =====================
+   PAGE 404
+   ===================== */
+.not-found {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2.5rem;
+}
+
+.not-found h1 {
+  font-family: var(--ff-display);
+  font-size: clamp(4rem, 12vw, 9rem);
+  font-weight: 300;
+  color: var(--fog);
+  line-height: 1;
+  margin-bottom: var(--spacing-m);
+}
+
+.not-found p {
+  font-family: var(--ff-display);
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--charcoal);
+  margin-bottom: var(--spacing-l);
+  max-width: 480px;
+  line-height: 1.5;
 }
 
 /* =====================
@@ -752,6 +849,18 @@ form .field { display: flex; flex-direction: column; }
   .portfolio-section { padding: var(--spacing-m) 1.5rem; }
   .masonry { columns: 1; }
 
+  .portfolio-subnav {
+    top: 60px;
+    flex-wrap: wrap;
+    gap: 0.8rem 1.5rem;
+    padding: 0.8rem 1.5rem;
+    justify-content: flex-start;
+  }
+
+  .portfolio-body {
+    padding-top: 130px;
+  }
+
   /* Shoots */
   .shoots-grid {
     grid-template-columns: 1fr;
@@ -785,6 +894,12 @@ form .field { display: flex; flex-direction: column; }
     grid-template-columns: 1fr;
     padding: calc(80px + var(--spacing-s)) 1.5rem var(--spacing-l);
     gap: var(--spacing-l);
+  }
+
+  form input,
+  form select,
+  form textarea {
+    width: 100%;
   }
 
   /* Page header (shoots) */

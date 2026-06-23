@@ -3,70 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio — erreka</title>
-  <meta name="description" content="Portfolio de Lucas Valerdi — Surf, silhouette, paysage, nature & texture." />
+  <title>Portfolio — Lucas Valerdi — Photographe Pays Basque</title>
+  <meta name="description" content="Portfolio de Lucas Valerdi — photographies surf, silhouette, paysage et nature au Pays Basque, Biarritz, Hendaye et côte atlantique." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Portfolio — Lucas Valerdi — Photographe Pays Basque" />
+  <meta property="og:description" content="Surf, silhouette, paysage, nature & texture. Photographies au Pays Basque." />
+  <meta property="og:image" content="https://erreka.studio/images/hero.jpg" />
+  <meta property="og:url" content="https://erreka.studio/portfolio.html" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=Karla:wght@300;400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <style>
-    .site-header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1.5rem 2.5rem;
-      background: rgba(242,239,233,0.95);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-    }
-    .portfolio-subnav {
-      position: sticky;
-      top: 72px;
-      z-index: 999;
-      display: flex;
-      gap: 2rem;
-      padding: 1rem 2.5rem;
-      background: rgba(242,239,233,0.98);
-      border-bottom: 1px solid var(--fog);
-      flex-wrap: wrap;
-    }
-    .portfolio-subnav a {
-      font-size: 0.85rem;
-      letter-spacing: 0.12em;
-      text-transform: lowercase;
-      color: var(--charcoal);
-      transition: color 0.3s ease;
-      padding-bottom: 2px;
-      border-bottom: 1px solid transparent;
-    }
-    .portfolio-subnav a:hover,
-    .portfolio-subnav a.active {
-      color: var(--charcoal);
-      border-bottom-color: var(--charcoal);
-    }
-    .portfolio-body {
-      padding-top: 120px;
-    }
-    @media (max-width: 768px) {
-      .portfolio-subnav {
-        top: 90px;
-        flex-wrap: wrap;
-        gap: 0.8rem 1.5rem;
-        padding: 0.8rem 1.5rem;
-        justify-content: flex-start;
-      }
-      .portfolio-body {
-        padding-top: 150px;
-      }
-    }
-  </style>
 </head>
 <body>
 
-  <header class="site-header">
+  <nav>
     <a href="index.html" class="nav-logo">erreka</a>
     <button class="nav-toggle" aria-label="Menu" onclick="toggleMenu()">
       <span></span><span></span>
@@ -78,7 +34,7 @@
       <li><a href="about.html">à propos</a></li>
       <li><a href="contact.html">contact</a></li>
     </ul>
-  </header>
+  </nav>
 
   <div class="portfolio-subnav">
     <a href="#surf" class="active">surf</a>
@@ -92,84 +48,91 @@
     <section class="portfolio-section" id="surf">
       <h2>surf</h2>
       <div class="masonry">
-        <div class="masonry-item"><img src="images/surf-1.jpg" alt="Surf" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/surf-2.jpg" alt="Surf" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/surf-3.jpg" alt="Surf" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/surf-4.jpg" alt="Surf" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/surf-5.jpg" alt="Surf" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/surf-6.jpg" alt="Surf" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/surf-7.jpg" alt="Surf" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/surf-8.jpg" alt="Surf" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/surf-9.jpg" alt="Surf" loading="lazy" onclick="openLightbox(this.src)" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/surf-1.jpg" alt="Surfeur sur la vague, côte basque" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/surf-2.jpg" alt="Session surf Pays Basque" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/surf-3.jpg" alt="Vague atlantique Biarritz" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/surf-4.jpg" alt="Surfeur en action Hendaye" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/surf-5.jpg" alt="Surf aérien côte atlantique" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/surf-6.jpg" alt="Surfeur silhouette coucher de soleil" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/surf-7.jpg" alt="Vague de fond Pays Basque" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/surf-8.jpg" alt="Surf tube océan atlantique" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/surf-9.jpg" alt="Session surf aube Pays Basque" loading="lazy" /></div>
       </div>
     </section>
 
     <section class="portfolio-section" id="silhouette">
       <h2>silhouette</h2>
       <div class="masonry">
-        <div class="masonry-item"><img src="images/silhouette-1.jpg" alt="Silhouette" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/silhouette-2.jpg" alt="Silhouette" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/silhouette-3.jpg" alt="Silhouette" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/silhouette-4.jpg" alt="Silhouette" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/silhouette-5.jpg" alt="Silhouette" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/silhouette-6.jpg" alt="Silhouette" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/silhouette-7.jpg" alt="Silhouette" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/silhouette-8.jpg" alt="Silhouette" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/silhouette-9.jpg" alt="Silhouette" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/silhouette-10.jpg" alt="Silhouette" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/silhouette-11.jpg" alt="Silhouette" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/silhouette-12.jpg" alt="Silhouette" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/silhouette-13.jpg" alt="Silhouette" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/silhouette-14.jpg" alt="Silhouette" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/silhouette-15.jpg" alt="Silhouette" loading="lazy" onclick="openLightbox(this.src)" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/silhouette-1.jpg" alt="Silhouette surfeur contre-jour océan" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/silhouette-2.jpg" alt="Silhouette coucher de soleil Pays Basque" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/silhouette-3.jpg" alt="Silhouette photographiée à contre-jour" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/silhouette-4.jpg" alt="Silhouette plage atlantique" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/silhouette-5.jpg" alt="Silhouette surfeuse Biarritz" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/silhouette-6.jpg" alt="Silhouette falaise côte basque" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/silhouette-7.jpg" alt="Silhouette aurore surf" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/silhouette-8.jpg" alt="Silhouette portrait lumière dorée" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/silhouette-9.jpg" alt="Silhouette plage Hendaye" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/silhouette-10.jpg" alt="Silhouette surf crépuscule" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/silhouette-11.jpg" alt="Silhouette Pyrénées Atlantiques" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/silhouette-12.jpg" alt="Silhouette brume matinale océan" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/silhouette-13.jpg" alt="Silhouette vague Pays Basque" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/silhouette-14.jpg" alt="Silhouette promenade côte atlantique" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/silhouette-15.jpg" alt="Silhouette pêcheur côte basque" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/silhouette-16.jpg" alt="Portrait silhouette lumière naturelle" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/silhouette-17.jpg" alt="Portrait contre-jour Pays Basque" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/silhouette-18.jpg" alt="Portrait silhouette extérieur" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/silhouette-19.jpg" alt="Portrait lumière dorée atlantique" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/silhouette-20.jpg" alt="Portrait silhouette coucher soleil" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/silhouette-21.jpg" alt="Portrait Biarritz lumière naturelle" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/silhouette-22.jpg" alt="Portrait extérieur Pays Basque" loading="lazy" /></div>
       </div>
     </section>
 
     <section class="portfolio-section" id="paysage">
       <h2>paysage</h2>
       <div class="masonry">
-        <div class="masonry-item"><img src="images/paysage-1.jpg" alt="Paysage" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/paysage-2.jpg" alt="Paysage" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/paysage-3.jpg" alt="Paysage" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/paysage-4.jpg" alt="Paysage" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/paysage-5.jpg" alt="Paysage" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/paysage-6.jpg" alt="Paysage" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/paysage-7.jpg" alt="Paysage" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/paysage-8.jpg" alt="Paysage" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/paysage-9.jpg" alt="Paysage" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/paysage-10.jpg" alt="Paysage" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/paysage-11.jpg" alt="Paysage" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/paysage-12.jpg" alt="Paysage" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/paysage-13.jpg" alt="Paysage" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/paysage-14.jpg" alt="Paysage" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/paysage-15.jpg" alt="Paysage" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/paysage-16.jpg" alt="Paysage" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/paysage-17.jpg" alt="Paysage" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/paysage-18.jpg" alt="Paysage" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/paysage-19.jpg" alt="Paysage" loading="lazy" onclick="openLightbox(this.src)" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/paysage-1.jpg" alt="Paysage côte basque atlantique" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/paysage-2.jpg" alt="Paysage Pyrénées Atlantiques" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/paysage-3.jpg" alt="Paysage océan Pays Basque" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/paysage-4.jpg" alt="Paysage falaises côte basque" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/paysage-5.jpg" alt="Paysage plage Hendaye" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/paysage-6.jpg" alt="Paysage montagne Pyrénées" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/paysage-7.jpg" alt="Paysage lumière matinale Biarritz" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/paysage-8.jpg" alt="Paysage côte brume atlantique" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/paysage-9.jpg" alt="Paysage coucher soleil océan" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/paysage-10.jpg" alt="Paysage vagues et rochers" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/paysage-11.jpg" alt="Paysage Pays Basque lumineux" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/paysage-12.jpg" alt="Paysage pins côte basque" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/paysage-13.jpg" alt="Paysage atlantique mer d'hiver" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/paysage-14.jpg" alt="Paysage landes Pays Basque" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/paysage-15.jpg" alt="Paysage Pyrénées hiver" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/paysage-16.jpg" alt="Paysage estran côte basque" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/paysage-17.jpg" alt="Paysage sable mouillé atlantique" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/paysage-18.jpg" alt="Paysage panoramique côte basque" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/paysage-19.jpg" alt="Paysage horizon atlantique" loading="lazy" /></div>
       </div>
     </section>
 
     <section class="portfolio-section" id="nature">
       <h2>nature & texture</h2>
       <div class="masonry">
-        <div class="masonry-item"><img src="images/nature-1.jpg" alt="Nature" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/nature-2.jpg" alt="Nature" loading="lazy" onclick="openLightbox(this.src)" /></div>
-        <div class="masonry-item"><img src="images/nature-3.jpg" alt="Nature" loading="lazy" onclick="openLightbox(this.src)" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/nature-1.jpg" alt="Texture écume vague Pays Basque" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/nature-2.jpg" alt="Nature détail macro côte atlantique" loading="lazy" /></div>
+        <div class="masonry-item" tabindex="0" onclick="openLightbox(this.querySelector('img').src)"><img src="images/nature-3.jpg" alt="Texture sable rocher Pays Basque" loading="lazy" /></div>
       </div>
     </section>
 
   </div>
 
   <!-- LIGHTBOX -->
-  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()" tabindex="-1" role="dialog" aria-label="Image agrandie">
     <button class="lightbox-close" onclick="closeLightbox()">fermer</button>
-    <img src="" alt="" id="lightbox-img" />
+    <img src="" alt="Image agrandie" id="lightbox-img" />
   </div>
 
   <footer>
     <p>© 2025 Lucas Valerdi — erreka.studio</p>
-    <a href="https://instagram.com/erreka_studio" target="_blank">instagram</a>
+    <a href="https://instagram.com/erreka_studio" target="_blank" rel="noopener noreferrer" aria-label="Instagram erreka_studio (nouvelle fenêtre)">instagram</a>
   </footer>
 
   <script src="script.js"></script>

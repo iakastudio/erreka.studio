@@ -3,12 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>erreka — Lucas Valerdi</title>
-  <meta name="description" content="Photographe. Surf, portrait, éditorial. Shoots sur mesure et tirages signés en édition limitée." />
+  <title>Lucas Valerdi — Photographe Pays Basque</title>
+  <meta name="description" content="Photographe au Pays Basque. Surf, portrait, éditorial à Biarritz, Hendaye et côte atlantique. Shoots sur mesure et tirages signés en édition limitée." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Lucas Valerdi — Photographe Pays Basque" />
+  <meta property="og:description" content="Photographe au Pays Basque. Surf, portrait, éditorial. Shoots sur mesure et tirages signés en édition limitée." />
+  <meta property="og:image" content="https://erreka.studio/images/hero.jpg" />
+  <meta property="og:url" content="https://erreka.studio/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Lucas Valerdi — Photographe Pays Basque" />
+  <meta name="twitter:description" content="Photographe au Pays Basque. Surf, portrait, éditorial." />
+  <meta name="twitter:image" content="https://erreka.studio/images/hero.jpg" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=Karla:wght@300;400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Photographer",
+    "name": "Lucas Valerdi",
+    "url": "https://erreka.studio",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hendaye",
+      "addressRegion": "Pays Basque",
+      "addressCountry": "FR"
+    },
+    "email": "contact@erreka.studio"
+  }
+  </script>
 </head>
 <body>
 
@@ -27,10 +57,23 @@
     </ul>
   </nav>
 
-  <!-- HERO -->
+  <!-- HERO — fondu enchaîné automatique -->
   <section class="hero">
     <div class="hero-image-wrap">
-      <img src="images/hero.jpg" alt="Côte atlantique" class="hero-img" />
+      <!-- Slide 1 : actif par défaut via JS -->
+      <div class="hero-slide">
+        <img src="images/hero.jpg" alt="Côte atlantique, Pays Basque" />
+      </div>
+      <!-- Slides 2-4 : remplacer hero.jpg par hero-2.jpg, hero-3.jpg, hero-4.jpg quand disponibles -->
+      <div class="hero-slide">
+        <img src="images/hero.jpg" alt="Surf au Pays Basque" />
+      </div>
+      <div class="hero-slide">
+        <img src="images/hero.jpg" alt="Portrait photographe Biarritz" />
+      </div>
+      <div class="hero-slide">
+        <img src="images/hero.jpg" alt="Paysage Pyrénées Atlantiques" />
+      </div>
     </div>
     <div class="hero-text">
       <p class="hero-eyebrow">Lucas Valerdi — Photographe</p>
@@ -51,25 +94,25 @@
   <section class="grid-preview">
     <div class="grid-item">
       <a href="portfolio.html#surf">
-        <img src="images/surf-1.jpg" alt="Photographie surf" />
+        <img src="images/surf-1.jpg" alt="Photographie surf Pays Basque" />
         <span>surf</span>
       </a>
     </div>
     <div class="grid-item">
       <a href="portfolio.html#silhouette">
-        <img src="images/silhouette-1.jpg" alt="Photographie silhouette" />
+        <img src="images/silhouette-1.jpg" alt="Photographie silhouette côte atlantique" />
         <span>silhouette</span>
       </a>
     </div>
     <div class="grid-item">
       <a href="portfolio.html#paysage">
-        <img src="images/paysage-1.jpg" alt="Photographie paysage" />
+        <img src="images/paysage-1.jpg" alt="Photographie paysage Pyrénées Atlantiques" />
         <span>paysage</span>
       </a>
     </div>
     <div class="grid-item">
       <a href="portfolio.html#nature">
-        <img src="images/nature-1.jpg" alt="Photographie nature et texture" />
+        <img src="images/nature-1.jpg" alt="Photographie nature et texture Pays Basque" />
         <span>nature & texture</span>
       </a>
     </div>
@@ -87,7 +130,7 @@
   <!-- FOOTER -->
   <footer>
     <p>© 2025 Lucas Valerdi — erreka.studio</p>
-    <a href="https://instagram.com/erreka_studio" target="_blank">instagram</a>
+    <a href="https://instagram.com/erreka_studio" target="_blank" rel="noopener noreferrer" aria-label="Instagram erreka_studio (nouvelle fenêtre)">instagram</a>
   </footer>
 
   <script src="script.js"></script>
