@@ -385,108 +385,79 @@ footer p, footer a {
 footer a:hover { color: var(--charcoal); }
 
 /* =====================
-   PORTFOLIO PAGE
+   PORTFOLIO MAGAZINE
    ===================== */
-.portfolio-subnav {
-  position: sticky;
-  top: 72px;
-  z-index: 999;
+.portfolio-magazine {
+  padding-top: 80px;
+  padding-bottom: var(--spacing-xl);
+}
+
+/* Pleine largeur, 70vh */
+.pf-full {
+  width: 100%;
+  height: 70vh;
+  min-height: 400px;
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: var(--spacing-l);
+}
+
+.pf-full img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+/* Centrée, max 500px */
+.pf-center {
+  max-width: 500px;
+  margin: 0 auto var(--spacing-l);
+  padding: 0 2.5rem;
+  cursor: pointer;
+}
+
+.pf-center img {
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+/* Duo côte à côte */
+.pf-duo {
   display: flex;
-  gap: 2rem;
-  padding: 1rem 2.5rem;
-  background: rgba(242,239,233,0.98);
-  border-bottom: 1px solid var(--fog);
-  flex-wrap: wrap;
+  gap: 3px;
+  margin-bottom: var(--spacing-l);
 }
 
-.portfolio-subnav a {
-  font-size: 0.85rem;
-  letter-spacing: 0.12em;
-  text-transform: lowercase;
-  color: var(--charcoal);
-  transition: color var(--transition);
-  padding-bottom: 2px;
-  border-bottom: 1px solid transparent;
-}
-
-.portfolio-subnav a:hover,
-.portfolio-subnav a.active {
-  color: var(--charcoal);
-  border-bottom-color: var(--charcoal);
-}
-
-.portfolio-body {
-  padding-top: 120px;
-}
-
-.page-header {
-  padding: calc(var(--spacing-xl) + 2rem) 2.5rem var(--spacing-m);
-}
-
-.page-header h1 {
-  font-family: var(--ff-display);
-  font-size: clamp(2.5rem, 6vw, 5rem);
-  font-weight: 300;
-  font-style: italic;
-}
-
-.portfolio-nav {
-  display: flex;
-  gap: 2rem;
-  padding: 4rem 2.5rem var(--spacing-l);
-  border-bottom: 1px solid var(--fog);
-  flex-wrap: wrap;
-}
-
-.portfolio-nav a {
-  font-size: 0.7rem;
-  letter-spacing: 0.15em;
-  text-transform: lowercase;
-  color: var(--stone);
-  transition: color var(--transition);
-  padding-bottom: 2px;
-  border-bottom: 1px solid transparent;
-}
-
-.portfolio-nav a:hover,
-.portfolio-nav a.active {
-  color: var(--charcoal);
-  border-bottom-color: var(--charcoal);
-}
-
-.portfolio-section {
-  padding: var(--spacing-l) 2.5rem;
-}
-
-.portfolio-section h2 {
-  font-family: var(--ff-display);
-  font-size: 1.1rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--stone);
-  margin-bottom: var(--spacing-m);
-}
-
-.masonry {
-  columns: 3;
-  column-gap: 3px;
-}
-
-.masonry-item {
-  break-inside: avoid;
-  margin-bottom: 3px;
+.pf-duo-item {
+  flex: 1;
+  aspect-ratio: 3/4;
   overflow: hidden;
   cursor: pointer;
 }
 
-.masonry-item img {
-  height: auto;
-  transition: transform 0.5s ease;
+.pf-duo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   pointer-events: none;
-  max-width: 1200px;
 }
 
-.masonry-item:hover img { transform: scale(1.02); }
+/* Décalée à droite, 60% */
+.pf-right {
+  width: 60%;
+  margin-left: auto;
+  margin-bottom: var(--spacing-l);
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+.pf-right img {
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
 
 /* =====================
    SHOOTS PAGE
@@ -933,20 +904,34 @@ form .field { display: flex; flex-direction: column; }
     text-align: center;
   }
 
-  /* Portfolio */
-  .portfolio-section { padding: var(--spacing-m) 1.5rem; }
-  .masonry { columns: 1; }
-
-  .portfolio-subnav {
-    top: 60px;
-    flex-wrap: wrap;
-    gap: 0.8rem 1.5rem;
-    padding: 0.8rem 1.5rem;
-    justify-content: flex-start;
+  /* Portfolio magazine — mobile : colonne unique */
+  .pf-full {
+    height: 55vw;
+    min-height: 260px;
+    margin-bottom: var(--spacing-m);
   }
 
-  .portfolio-body {
-    padding-top: 130px;
+  .pf-center {
+    max-width: 100%;
+    padding: 0 1.5rem;
+    margin-bottom: var(--spacing-m);
+  }
+
+  .pf-duo {
+    flex-direction: column;
+    gap: var(--spacing-m);
+    margin-bottom: var(--spacing-m);
+  }
+
+  .pf-duo-item {
+    aspect-ratio: 4/3;
+  }
+
+  .pf-right {
+    width: 100%;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    margin-bottom: var(--spacing-m);
   }
 
   /* Shoots */
@@ -1018,5 +1003,4 @@ form .field { display: flex; flex-direction: column; }
 
   .intro p { font-size: 1.1rem; }
 
-  .masonry { columns: 1; }
 }
