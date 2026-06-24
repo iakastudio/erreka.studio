@@ -384,84 +384,35 @@ footer p, footer a {
 footer a:hover { color: var(--charcoal); }
 
 /* =====================
-   PORTFOLIO MAGAZINE
+   PORTFOLIO
    ===================== */
 .portfolio-magazine {
   padding-top: 80px;
   padding-bottom: var(--spacing-xl);
-}
-
-.pf-block {
-  margin-bottom: 6rem;
-}
-
-/* Pleine largeur, 70vh */
-.pf-full {
-  width: 100%;
-  height: 70vh;
-  min-height: 400px;
-  overflow: hidden;
-  cursor: pointer;
-  margin-bottom: 2.5rem;
-}
-
-.pf-full img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  pointer-events: none;
-}
-
-/* Centrée, max 500px */
-.pf-center {
-  max-width: 500px;
-  margin: 0 auto 2.5rem;
-  padding: 0 2.5rem;
-  cursor: pointer;
-}
-
-.pf-center img {
-  width: 100%;
-  height: auto;
-  object-fit: initial;
-  pointer-events: none;
-}
-
-/* Duo côte à côte */
-.pf-duo {
-  display: flex;
-  gap: 3px;
-  margin-bottom: 2.5rem;
-}
-
-.pf-duo-item {
-  flex: 1;
-  min-width: 0;
-  aspect-ratio: 2/3;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.pf-duo-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  pointer-events: none;
-}
-
-/* Décalée à droite, 60% */
-.pf-right {
-  width: 60%;
-  margin-left: auto;
-  margin-bottom: 0;
+  padding-left: 2.5rem;
   padding-right: 2.5rem;
+}
+
+.pf-photo {
+  width: 65%;
+  margin-bottom: 6rem;
   cursor: pointer;
 }
 
-.pf-right img {
+.pf-photo:nth-child(odd) {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.pf-photo:nth-child(even) {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.pf-photo img {
   width: 100%;
   height: auto;
-  object-fit: initial;
+  display: block;
   pointer-events: none;
 }
 
@@ -910,37 +861,17 @@ form .field { display: flex; flex-direction: column; }
     text-align: center;
   }
 
-  /* Portfolio magazine — mobile : colonne unique */
-  .pf-block {
-    margin-bottom: 2rem;
+  /* Portfolio — mobile */
+  .portfolio-magazine {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
-  .pf-full {
-    height: 60vw;
-    min-height: 240px;
-    margin-bottom: 2rem;
-  }
-
-  .pf-center {
-    max-width: 100%;
-    padding: 0 1.5rem;
-    margin-bottom: 2rem;
-  }
-
-  .pf-duo {
-    flex-direction: column;
-    gap: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .pf-duo-item {
-    aspect-ratio: 3/2;
-  }
-
-  .pf-right {
+  .pf-photo {
     width: 100%;
-    padding: 0 1.5rem;
-    margin-bottom: 0;
+    margin-bottom: 2rem;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
   /* Shoots */
