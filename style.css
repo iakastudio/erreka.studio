@@ -41,8 +41,7 @@ body {
 img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   -webkit-user-drag: none;
   user-select: none;
   -webkit-user-select: none;
@@ -392,6 +391,10 @@ footer a:hover { color: var(--charcoal); }
   padding-bottom: var(--spacing-xl);
 }
 
+.pf-block {
+  margin-bottom: 6rem;
+}
+
 /* Pleine largeur, 70vh */
 .pf-full {
   width: 100%;
@@ -399,7 +402,7 @@ footer a:hover { color: var(--charcoal); }
   min-height: 400px;
   overflow: hidden;
   cursor: pointer;
-  margin-bottom: var(--spacing-l);
+  margin-bottom: 2.5rem;
 }
 
 .pf-full img {
@@ -412,7 +415,7 @@ footer a:hover { color: var(--charcoal); }
 /* Centrée, max 500px */
 .pf-center {
   max-width: 500px;
-  margin: 0 auto var(--spacing-l);
+  margin: 0 auto 2.5rem;
   padding: 0 2.5rem;
   cursor: pointer;
 }
@@ -420,6 +423,7 @@ footer a:hover { color: var(--charcoal); }
 .pf-center img {
   width: 100%;
   height: auto;
+  object-fit: initial;
   pointer-events: none;
 }
 
@@ -427,12 +431,13 @@ footer a:hover { color: var(--charcoal); }
 .pf-duo {
   display: flex;
   gap: 3px;
-  margin-bottom: var(--spacing-l);
+  margin-bottom: 2.5rem;
 }
 
 .pf-duo-item {
   flex: 1;
-  aspect-ratio: 3/4;
+  min-width: 0;
+  aspect-ratio: 2/3;
   overflow: hidden;
   cursor: pointer;
 }
@@ -448,7 +453,7 @@ footer a:hover { color: var(--charcoal); }
 .pf-right {
   width: 60%;
   margin-left: auto;
-  margin-bottom: var(--spacing-l);
+  margin-bottom: 0;
   padding-right: 2.5rem;
   cursor: pointer;
 }
@@ -456,6 +461,7 @@ footer a:hover { color: var(--charcoal); }
 .pf-right img {
   width: 100%;
   height: auto;
+  object-fit: initial;
   pointer-events: none;
 }
 
@@ -905,33 +911,36 @@ form .field { display: flex; flex-direction: column; }
   }
 
   /* Portfolio magazine — mobile : colonne unique */
+  .pf-block {
+    margin-bottom: 2rem;
+  }
+
   .pf-full {
-    height: 55vw;
-    min-height: 260px;
-    margin-bottom: var(--spacing-m);
+    height: 60vw;
+    min-height: 240px;
+    margin-bottom: 2rem;
   }
 
   .pf-center {
     max-width: 100%;
     padding: 0 1.5rem;
-    margin-bottom: var(--spacing-m);
+    margin-bottom: 2rem;
   }
 
   .pf-duo {
     flex-direction: column;
-    gap: var(--spacing-m);
-    margin-bottom: var(--spacing-m);
+    gap: 2rem;
+    margin-bottom: 2rem;
   }
 
   .pf-duo-item {
-    aspect-ratio: 4/3;
+    aspect-ratio: 3/2;
   }
 
   .pf-right {
     width: 100%;
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
-    margin-bottom: var(--spacing-m);
+    padding: 0 1.5rem;
+    margin-bottom: 0;
   }
 
   /* Shoots */
