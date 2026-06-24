@@ -387,33 +387,24 @@ footer a:hover { color: var(--charcoal); }
    PORTFOLIO
    ===================== */
 .portfolio-magazine {
-  padding-top: 80px;
-  padding-bottom: var(--spacing-xl);
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 80px 2rem var(--spacing-xl);
 }
 
 .pf-photo {
-  width: 65% !important;
-  margin-bottom: 6rem !important;
-  display: block !important;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 8rem;
   cursor: pointer;
 }
 
-.pf-photo:nth-child(odd) {
-  margin-left: 0 !important;
-  margin-right: auto !important;
-}
-
-.pf-photo:nth-child(even) {
-  margin-left: auto !important;
-  margin-right: 0 !important;
-}
-
 .pf-photo img {
-  width: 100% !important;
-  height: auto !important;
-  display: block !important;
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
   pointer-events: none;
 }
 
@@ -864,15 +855,12 @@ form .field { display: flex; flex-direction: column; }
 
   /* Portfolio — mobile */
   .portfolio-magazine {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .pf-photo {
-    width: 100% !important;
-    margin-bottom: 2rem !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin-bottom: 4rem;
   }
 
   /* Shoots */
