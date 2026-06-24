@@ -970,23 +970,46 @@ form .field { display: flex; flex-direction: column; }
    MERCI PAGE
    ===================== */
 .merci-wrap {
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 70vh;
-  padding: 160px 2rem var(--spacing-l);
   text-align: center;
-  gap: 2.5rem;
+  padding: 2rem;
 }
 
-.merci-text {
+.merci-title {
   font-family: var(--ff-display);
-  font-style: italic;
+  font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 300;
-  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-style: italic;
   color: var(--charcoal);
-  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.merci-sub {
+  font-family: var(--ff-body);
+  font-size: 0.85rem;
+  color: var(--stone);
+  letter-spacing: 0.1em;
+  margin-bottom: 3rem;
+}
+
+.merci-back {
+  font-family: var(--ff-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: lowercase;
+  color: var(--charcoal);
+  border-bottom: 1px solid var(--charcoal);
+  padding-bottom: 2px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.merci-back:hover {
+  color: var(--stone);
+  border-color: var(--stone);
 }
 
 /* =====================
