@@ -453,7 +453,7 @@ footer a:hover { color: var(--charcoal); }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--spacing-xl);
-  padding: var(--spacing-l) 2.5rem;
+  padding: 120px 2.5rem var(--spacing-l);
   max-width: var(--max-w);
 }
 
@@ -524,7 +524,7 @@ form .field { display: flex; flex-direction: column; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--spacing-xl);
-  padding: var(--spacing-l) 2.5rem;
+  padding: 120px 2.5rem var(--spacing-l);
   max-width: var(--max-w);
   align-items: start;
 }
