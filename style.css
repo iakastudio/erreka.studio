@@ -394,25 +394,26 @@ footer a:hover { color: var(--charcoal); }
 }
 
 .pf-photo {
-  width: 65%;
-  margin-bottom: 6rem;
+  width: 65% !important;
+  margin-bottom: 6rem !important;
+  display: block !important;
   cursor: pointer;
 }
 
 .pf-photo:nth-child(odd) {
-  margin-left: 0;
-  margin-right: auto;
+  margin-left: 0 !important;
+  margin-right: auto !important;
 }
 
 .pf-photo:nth-child(even) {
-  margin-left: auto;
-  margin-right: 0;
+  margin-left: auto !important;
+  margin-right: 0 !important;
 }
 
 .pf-photo img {
-  width: 100%;
-  height: auto;
-  display: block;
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
   pointer-events: none;
 }
 
@@ -868,8 +869,8 @@ form .field { display: flex; flex-direction: column; }
   }
 
   .pf-photo {
-    width: 100%;
-    margin-bottom: 2rem;
+    width: 100% !important;
+    margin-bottom: 2rem !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
