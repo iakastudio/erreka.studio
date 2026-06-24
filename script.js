@@ -90,43 +90,6 @@ document.addEventListener('dragstart', (e) => {
   if (e.target.tagName === 'IMG') e.preventDefault();
 });
 
-// =====================
-// CONTACT FORM — Formspree
-// =====================
-async function handleSubmit(e) {
-  e.preventDefault();
-  const form = document.getElementById('contact-form');
-  const btn = document.getElementById('submit-btn');
-  const success = document.getElementById('form-success');
-  const error = document.getElementById('form-error');
-
-  btn.textContent = 'envoi...';
-  btn.disabled = true;
-
-  const data = new FormData(form);
-
-  try {
-    const res = await fetch('https://formspree.io/f/VOTRE_ID', {
-      method: 'POST',
-      body: data,
-      headers: { Accept: 'application/json' }
-    });
-
-    if (res.ok) {
-      form.reset();
-      success.style.display = 'block';
-      error.style.display = 'none';
-      btn.style.display = 'none';
-    } else {
-      throw new Error('Erreur serveur');
-    }
-  } catch {
-    error.style.display = 'block';
-    success.style.display = 'none';
-    btn.textContent = 'envoyer';
-    btn.disabled = false;
-  }
-}
 
 // =====================
 // PRE-SELECT depuis URL param

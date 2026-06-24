@@ -52,7 +52,9 @@
       </p>
     </div>
 
-    <form id="contact-form" onsubmit="handleSubmit(event)">
+    <form action="https://formspree.io/f/mgojvkvl" method="POST" id="contact-form">
+
+      <input type="hidden" name="_next" value="https://erreka.studio/merci.html" />
 
       <div class="field">
         <label for="name">nom</label>
@@ -82,14 +84,7 @@
         <textarea id="message" name="message" required placeholder="Décrivez votre projet, vos dates, vos questions..."></textarea>
       </div>
 
-      <button type="submit" class="btn" id="submit-btn">envoyer</button>
-
-      <p id="form-success" style="display:none; font-size: 0.8rem; color: var(--stone); margin-top: 1rem;">
-        Message envoyé — je reviens vers vous rapidement.
-      </p>
-      <p id="form-error" style="display:none; font-size: 0.8rem; color: #c0392b; margin-top: 1rem;">
-        Une erreur s'est produite. Écrivez-moi directement à contact@erreka.studio
-      </p>
+      <button type="submit">envoyer</button>
 
     </form>
 

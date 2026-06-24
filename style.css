@@ -329,6 +329,44 @@ nav::before {
   color: var(--cream);
 }
 
+button[type="submit"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--charcoal);
+  color: var(--charcoal);
+  font-family: var(--ff-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: lowercase;
+  padding: 0.75rem 0;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+  width: auto;
+}
+
+button[type="submit"]::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--stone);
+  transition: width 0.4s ease;
+}
+
+button[type="submit"]:hover::after {
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  color: var(--stone);
+}
+
 /* =====================
    CTA WORK TOGETHER
    ===================== */
@@ -920,6 +958,35 @@ form .field { display: flex; flex-direction: column; }
     right: 1rem;
     font-size: 0.85rem;
   }
+}
+
+  button[type="submit"] {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+/* =====================
+   MERCI PAGE
+   ===================== */
+.merci-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: 160px 2rem var(--spacing-l);
+  text-align: center;
+  gap: 2.5rem;
+}
+
+.merci-text {
+  font-family: var(--ff-display);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: var(--charcoal);
+  line-height: 1.5;
 }
 
 /* =====================
