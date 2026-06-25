@@ -334,7 +334,6 @@ button[type="submit"] {
   appearance: none;
   background: transparent;
   border: none;
-  border-bottom: 1px solid var(--charcoal);
   color: var(--charcoal);
   font-family: var(--ff-body);
   font-size: 0.7rem;
@@ -344,18 +343,16 @@ button[type="submit"] {
   cursor: pointer;
   position: relative;
   display: inline-block;
-  transition: color 0.3s ease;
-  width: auto;
 }
 
 button[type="submit"]::after {
   content: '';
   position: absolute;
-  bottom: -1px;
+  bottom: 0;
   left: 0;
   width: 0;
   height: 1px;
-  background: var(--stone);
+  background: var(--charcoal);
   transition: width 0.4s ease;
 }
 
@@ -363,8 +360,32 @@ button[type="submit"]:hover::after {
   width: 100%;
 }
 
-button[type="submit"]:hover {
-  color: var(--stone);
+/* =====================
+   ANIMATED LINK
+   ===================== */
+.animated-link {
+  font-family: var(--ff-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: lowercase;
+  color: var(--charcoal);
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.animated-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--charcoal);
+  transition: width 0.4s ease;
+}
+
+.animated-link:hover::after {
+  width: 100%;
 }
 
 /* =====================
