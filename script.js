@@ -94,8 +94,10 @@ document.addEventListener('dragstart', (e) => {
 // CONTACT FORM — Formspree Ajax
 // =====================
 const form = document.getElementById('contact-form');
+console.log('Form found:', form); // debug
 if (form) {
   form.addEventListener('submit', async function(e) {
+    console.log('Form submitted'); // debug
     e.preventDefault();
     const btn = form.querySelector('button[type="submit"]');
     btn.textContent = 'sending...';
