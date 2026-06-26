@@ -564,7 +564,7 @@ form .field { display: flex; flex-direction: column; }
 .about-img-wrap {
   width: 100%;
   max-width: 500px;
-  aspect-ratio: 2/3;
+  aspect-ratio: 3/4;
   overflow: hidden;
 }
 
@@ -797,7 +797,7 @@ form .field { display: flex; flex-direction: column; }
     gap: var(--spacing-l);
   }
 
-  .about-img-wrap { aspect-ratio: 2/3; max-width: 100%; }
+  .about-img-wrap { aspect-ratio: 3/4; max-width: 100%; }
 
   .contact-wrap { grid-template-columns: 1fr; }
 
@@ -903,7 +903,7 @@ form .field { display: flex; flex-direction: column; }
     gap: var(--spacing-m);
   }
 
-  .about-img-wrap { aspect-ratio: 2/3; max-width: 100%; }
+  .about-img-wrap { aspect-ratio: 3/4; max-width: 100%; }
 
   /* Tirages */
   .tirages-intro {
