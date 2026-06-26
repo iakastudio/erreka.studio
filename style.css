@@ -352,7 +352,7 @@ button[type="submit"]:hover::after {
 .cta-work {
   display: flex;
   justify-content: center;
-  padding: 0 2.5rem var(--spacing-l);
+  padding: 5rem 2.5rem;
 }
 
 .btn-work {
