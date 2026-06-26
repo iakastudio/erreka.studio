@@ -215,21 +215,6 @@ nav::before {
 /* =====================
    INTRO
    ===================== */
-.intro {
-  max-width: 620px;
-  margin: calc(var(--spacing-xl) * 1.4) auto;
-  padding: 0 2.5rem;
-  text-align: center;
-}
-
-.intro p {
-  font-family: var(--ff-display);
-  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-  font-weight: 300;
-  font-style: italic;
-  line-height: 1.6;
-  color: var(--charcoal);
-}
 
 /* =====================
    GRID PREVIEW
@@ -774,10 +759,6 @@ form .field { display: flex; flex-direction: column; }
    DESKTOP — ESPACEMENT RÉDUIT
    ===================== */
 @media (min-width: 769px) {
-  .intro {
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-  }
 .grid-preview {
     margin-bottom: 0;
   }
@@ -863,9 +844,6 @@ form .field { display: flex; flex-direction: column; }
     opacity: 1;
     transform: translateY(0);
   }
-
-  /* Intro */
-  .intro { padding: 0 1.5rem; margin: var(--spacing-l) auto; }
 
 /* Footer */
   footer {
@@ -1009,6 +987,5 @@ form .field { display: flex; flex-direction: column; }
 
   .hero h1 { font-size: clamp(2rem, 11vw, 3rem); }
 
-  .intro p { font-size: 1.1rem; }
 
 }
