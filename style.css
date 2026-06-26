@@ -285,33 +285,6 @@ nav::before {
 /* =====================
    CTA TIRAGES
    ===================== */
-.cta-tirages {
-  margin: calc(var(--spacing-xl) * 1.4) 0;
-  padding: 0 2.5rem;
-  display: flex;
-  justify-content: center;
-}
-
-.cta-inner {
-  text-align: center;
-  max-width: 500px;
-}
-
-.cta-label {
-  font-size: 0.65rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: var(--stone);
-  margin-bottom: var(--spacing-s);
-}
-
-.cta-inner h2 {
-  font-family: var(--ff-display);
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  font-weight: 300;
-  line-height: 1.1;
-  margin-bottom: var(--spacing-m);
-}
 
 .btn {
   display: inline-block;
@@ -800,11 +773,7 @@ form .field { display: flex; flex-direction: column; }
     margin-top: 4rem;
     margin-bottom: 4rem;
   }
-  .cta-tirages {
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-  }
-  .grid-preview {
+.grid-preview {
     margin-bottom: 0;
   }
 }
@@ -901,10 +870,7 @@ form .field { display: flex; flex-direction: column; }
   /* Intro */
   .intro { padding: 0 1.5rem; margin: var(--spacing-l) auto; }
 
-  /* CTA */
-  .cta-tirages { padding: 0 1.5rem; }
-
-  /* Footer */
+/* Footer */
   footer {
     padding: var(--spacing-m) 1.5rem;
     flex-direction: column;
