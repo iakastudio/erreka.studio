@@ -217,54 +217,31 @@ nav::before {
    ===================== */
 
 /* =====================
-   GRID PREVIEW
+   WORK PHOTOS
    ===================== */
-.grid-preview {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2px;
-  padding: 0 2px;
+.work-photos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2rem;
 }
 
-.grid-item {
-  position: relative;
-  aspect-ratio: 2/3;
-  overflow: hidden;
-}
-
-.grid-item a {
+.work-photos a {
   display: block;
   width: 100%;
-  height: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.grid-item img {
-  transition: transform 0.6s ease, filter 0.6s ease;
-  filter: brightness(0.85);
-  pointer-events: none;
+.work-photos a + a {
+  margin-top: 6rem;
 }
 
-.grid-item:hover img {
-  transform: scale(1.04);
-  filter: brightness(0.7);
-}
-
-.grid-item span {
-  position: absolute;
-  bottom: 1.2rem;
-  left: 1.2rem;
-  font-size: 0.7rem;
-  letter-spacing: 0.18em;
-  text-transform: lowercase;
-  color: var(--cream);
-  opacity: 0;
-  transform: translateY(4px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.grid-item:hover span {
-  opacity: 1;
-  transform: translateY(0);
+.work-photos img {
+  width: 100%;
+  height: auto;
+  max-height: 85vh;
+  object-fit: contain;
 }
 
 /* =====================
@@ -347,12 +324,18 @@ button[type="submit"]:hover::after {
 }
 
 /* =====================
-   CTA WORK TOGETHER
+   CTA EXPLORE / WORK TOGETHER
    ===================== */
+.cta-explore {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+
 .cta-work {
   display: flex;
   justify-content: center;
-  padding: 5rem 2.5rem;
+  padding: 3rem 2rem;
 }
 
 .btn-work {
@@ -755,21 +738,11 @@ form .field { display: flex; flex-direction: column; }
   line-height: 1.5;
 }
 
-/* =====================
-   DESKTOP — ESPACEMENT RÉDUIT
-   ===================== */
-@media (min-width: 769px) {
-.grid-preview {
-    margin-bottom: 0;
-  }
-}
 
 /* =====================
    RESPONSIVE — TABLET
    ===================== */
 @media (max-width: 1024px) {
-  .grid-preview { grid-template-columns: repeat(2, 1fr); }
-
   .shoots-grid {
     grid-template-columns: 1fr;
     max-width: 640px;
@@ -833,16 +806,13 @@ form .field { display: flex; flex-direction: column; }
   .hero-text { left: 1.5rem; bottom: 5rem; }
   .hero h1 { font-size: clamp(2.2rem, 10vw, 3.5rem); }
 
-  /* Grid preview — labels toujours visibles sur touch */
-  .grid-preview {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2px;
-    padding: 0 2px;
+  /* Work photos — mobile */
+  .work-photos a + a {
+    margin-top: 2rem;
   }
 
-  .grid-item span {
-    opacity: 1;
-    transform: translateY(0);
+  .work-photos img {
+    max-height: 70vh;
   }
 
 /* Footer */
@@ -983,9 +953,5 @@ form .field { display: flex; flex-direction: column; }
    RESPONSIVE — PETIT MOBILE
    ===================== */
 @media (max-width: 480px) {
-  .grid-preview { grid-template-columns: repeat(2, 1fr); }
-
   .hero h1 { font-size: clamp(2rem, 11vw, 3rem); }
-
-
 }
