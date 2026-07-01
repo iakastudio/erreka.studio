@@ -330,12 +330,6 @@ button[type="submit"]:hover::after {
 /* =====================
    CTA EXPLORE / WORK TOGETHER
    ===================== */
-.cta-explore {
-  display: flex;
-  justify-content: center;
-  padding: 4rem 2rem;
-}
-
 .cta-work {
   display: flex;
   justify-content: center;
